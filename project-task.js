@@ -1,5 +1,4 @@
-/*
-===========================================
+/*==================================
 🔁 Function Refactoring Activity
 ===========================================
 
@@ -32,7 +31,7 @@ This activity reinforces:
 // ❌ Original Code (Before Refactoring)
 // ============================================
 
-// Script 1 - Greeting multiple users
+/*// Script 1 - Greeting multiple users
 console.log("Welcome, Alice!");
 console.log("Welcome, Bob!");
 console.log("Welcome, Charlie!");
@@ -71,4 +70,49 @@ for (let i = 0; i < names.length; i++) {
    - Keep your code clean, readable, and easy to maintain
 */
 
-// ✅ Your refactored code goes below this line!
+// Your refactored code goes below this line!
+//Ans
+//  Function to greet a single user
+function greetUser(name) {
+   console.log("Welcome, " + name + "!");
+}
+
+//  Function to calculate the sum of two numbers
+function calculateSum(a, b) {
+   return a + b;
+}
+
+// Function to calculate the product of two numbers
+function calculateProduct(a, b) {
+   return a * b;
+}
+
+//  Function to print all names in a list
+function printNamesList(namesArray) {
+   console.log("Names in the list:");
+   for (let i = 0; i < namesArray.length; i++) {
+       console.log(namesArray[i]);
+   }
+}
+//Using the functions with
+
+// Script 1 - Greeting multiple users
+let users = ["Alice", "Bob", "Charlie"];
+users.forEach(greetUser);//using .forEach  for greeting each element seperatly
+
+// Script 2 & 3 - Sum and Product calculation
+let num1 = 5, num2 = 10;
+let sum = calculateSum(num1, num2);
+console.log("The sum of " + num1 + " and " + num2 + " is " + sum);
+
+let product = calculateProduct(num1, num2);
+console.log("The product of " + num1 + " and " + num2 + " is " + product);
+
+// Script 4 - Print names from a list
+printNamesList(users);
+
+let names = ["Alice", "Bob", "Charlie"];
+console.log("Names in the list:");
+for (let i = 0; i < names.length; i++) {
+   console.log(names[i]);
+}
